@@ -1,38 +1,324 @@
-.App {
-  text-align: center;
+* {
+  font-family: "Calibri Light";
+  letter-spacing: -1px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #1d1f21;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* start of header css */
+.header {
+  margin-top: auto;
+  width: 100%;
+  background-color: black;
+  color: #c5c8c6;
+  height: 67px;
+  top: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.topHeader {
+  height: 40px;
+  background-color: black;
+  display: block;
+  margin-bottom: -16px;
+}
+
+.desuDropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.desuDropbtn {
+  font-weight: 500;
+  background: transparent;
+  color: #c5c8c6;
+  font-size: 25px;
+  display: inline;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 24px;
+  font-stretch: extra-condensed;
+  border: none;
+  padding-top: 2px;
+}
+
+.desuDropbtn:focus {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.desuDropArrow {
+  height: 0;
+  width: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #999999;
+  position: relative;
+  top: 19.5px;
+  margin-left: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.desuDropContent {
+  display: none;
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+  margin-left: 35px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.desuDropContent a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  text-align: left;
+}
+
+.show {
+  display: block;
+}
+
+.searchBarDiv {
+  display: inline-block;
+  margin-left: 1055px;
+  margin-top: 3px;
+  padding: 0 10px 0 10px;
+}
+
+#searchBar {
+  color: black;
+  font-size: 16px;
+  width: 420px;
+  height: 28px;
+  border-radius: 20px;
+  border: 1px solid;
+  background-image: linear-gradient(black, black),
+    linear-gradient(to bottom, #111111, #262626);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.searchBarDiv input[type="text"]:focus {
+  background-image: linear-gradient(white, white) !important;
+  padding-left: 10px;
+  box-shadow: inset 0 0 0 11px white;
+}
+
+::placeholder {
+  color: #c5c8c6;
+}
+
+.donateBtn {
+  font-size: 16px;
+  color: inherit;
+  text-decoration: none;
+  position: absolute;
+  margin-left: 186px;
+  margin-top: 10px;
+}
+
+.donateBtn :visited {
+  text-decoration: none;
+}
+
+.bottomHeader {
+  padding-left: 35px;
+  height: 25px;
+  background-color: #1d1f21;
+  display: block;
+}
+
+.bottomLinks {
+  color: #81a2be;
+}
+
+.clickedSearch {
+  background-image: white;
+}
+
+.archives {
+  list-style: none;
+  font-size: 10px;
+}
+
+.archive {
+  margin-left: -40px;
+  margin-bottom: -10px;
+  overflow: hidden;
+  box-sizing: content-box, border-box, padding-box;
+}
+
+.arcLink {
+  line-height: 0%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.arcLink:hover {
+  background-color: #6a836f;
+}
+
+.blink3 {
+  display: inline-block;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.blink4 {
+  display: inline-block;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+/* end of header css */
+
+/* start of body css */
+.bod {
+  background-color: #1d1f21;
+  width: 100%;
+  display: flex;
+  margin-top: auto;
+  padding-top: 50px;
+  color: #c5c8c6;
+}
+
+.bod * {
+  font-family: "Arial";
+}
+
+.bodColumns {
+  margin-left: 30px;
+  margin-bottom: -6px;
+}
+
+.artLink {
+  display: flex;
+  margin-bottom: 14px;
+  flex-direction: column;
+  font-size: 23px;
+  color: #81a2be;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.artLink:hover {
+  text-decoration: underline;
+  color: #5f89ac;
+}
+
+#arcColumn {
+  margin-left: 250px;
+}
+
+#boardColumn {
+  margin-left: 70px;
+}
+
+#artColumn {
+  margin-left: 60px;
+}
+
+.boards {
+  list-style: none;
+  display: block;
+}
+
+.board {
+  display: flex;
+}
+
+.bodColumns {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.board h2 {
+  display: inline-block;
+  flex-direction: column;
+}
+
+.boardLink {
+  color: #81a2be;
+  line-height: 0%;
+  margin-bottom: 10px;
+}
+
+.blink {
+  display: inline-block;
+  flex-direction: column;
+  font-size: 15.5px;
+}
+
+.blink2 {
+  display: inline-block;
+  flex-direction: column;
+  font-size: 22.5px;
+}
+
+.boardLink:hover {
+  border-bottom: #81a2be 2px solid;
+  color: #5f89ac;
+}
+
+/* end of body css */
+
+/* start of footer css */
+.foot {
+  background-color: black;
+  color: #c5c8c6;
+  margin-top: auto;
+  margin-bottom: -22.5px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.foot * {
+  font-family: Arial;
+  font-weight: lighter;
+}
+
+.footer {
+  display: flex;
+  padding-left: 14px;
+  padding-top: 18px;
+  padding-bottom: 10px;
+  padding-right: 14px;
+  font-size: 12px;
+  color: #c5c8c6;
+}
+
+.footer a {
+  color: #c5c8c6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+#biblio {
+  margin-left: 45px;
+}
+
+#bibnoma {
+  text-decoration: underline;
+}
+
+#faqdonate {
+  margin-left: 674px;
+  margin-right: 20px;
+}
+
+.changers {
+  border-radius: 5px;
+  max-width: 110px;
+  font-size: 12px;
+  margin: 0 10px 0 10px;
+}
+
+#theme {
+  width: 93px;
 }
