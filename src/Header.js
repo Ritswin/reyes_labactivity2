@@ -83,9 +83,16 @@ function searchBarClick() {
 function Arch(props) {
   return (
     <div className="archive">
-      <a href={props.boardObj.link} className="arcLink">
+      <a
+        href={`${
+          props.boardObj.boardtype === "blue" ? props.boardObj.link : "#"
+        }`}
+        className={`${
+          props.boardObj.boardtype === "blue" ? "arcLink" : "arcRed"
+        }`}
+      >
         <h1 className="blink4">/{props.boardObj.short}/ - ‌‌</h1>
-        <h2 className="blink3"> {props.boardObj.name}</h2>
+        <h2 className="blink3"> {props.boardObj.name} </h2>
       </a>
     </div>
   );
